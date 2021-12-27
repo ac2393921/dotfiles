@@ -60,6 +60,11 @@
 !/.config/**
 !/.gitignore_global
 !/.gitconfig_shared
+!/tmux
+!/zsh
+!/.vscode
+!/install.sh
+!/Makefile
 
 !/README.md
 !/LICENSE
