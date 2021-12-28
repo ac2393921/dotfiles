@@ -63,6 +63,7 @@
 !/tmux
 !/zsh
 !/.vscode
+!/.github
 !/install.sh
 !/Makefile
 
