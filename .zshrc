@@ -12,7 +12,7 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 export PATH=/Users/user_name/anaconda3/bin:$PATH
 export PS1="%F{green}%n%f %F{yellow}%c%f %F{yellow}$%f "
-export　PATH=/Users/user_name/anaconda3/bin:$PATH
+export PATH=/Users/user_name/anaconda3/bin:$PATH
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
@@ -75,6 +75,7 @@ alias dcud='docker-compose up -d'
 alias tensorflow='source /Users/masayakojima/tensorflow_macos_venv/bin/activate'
 alias ..='cd ..'
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias lzd='lazydocker'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
