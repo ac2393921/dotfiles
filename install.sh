@@ -16,7 +16,14 @@ for f in .??*; do
     [ "$f" = ".require_oh-my-zsh" ] && continue
     [ "$f" = ".gitmodules" ] && continue
 
-    ln -snfv ~/dotfiles/"$f" ~/
+    if [ "$f" = ".config" ]; then
+      for c in .config/??*; do
+        echo $c
+        ln -snfv ~/dotfiles/"$c" ~/"$c"
+      done
+    else
+      ln -snfv ~/dotfiles/"$f" ~/
+    fi
 done
 
 [ -e ~/.gitconfig.local ] || cp ~/dotfiles/.gitconfig.local.template ~/.gitconfig.local
