@@ -71,3 +71,4 @@
 !/LICENSE
 !.gitignore
 !.gitkeep
+!/dist
