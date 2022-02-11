@@ -12,6 +12,7 @@ if has("nvim")
   Plug 'kristijanhusak/defx-git'
   Plug 'kristijanhusak/defx-icons'
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'williamboman/nvim-lsp-installer'
   Plug 'neovim/nvim-lspconfig'
   Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
   Plug 'folke/lsp-colors.nvim'
@@ -25,11 +26,13 @@ if has("nvim")
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'windwp/nvim-autopairs'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'lambdalisue/fern.vim'
   Plug 'yuki-yano/fern-preview.vim'
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'onsails/lspkind-nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+  Plug 'nvim-lua/completion-nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
