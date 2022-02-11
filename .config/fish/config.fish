@@ -57,3 +57,6 @@ set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
   source $LOCAL_CONFIG
 end
+
+set -U FZF_LEGACY_KEYBINDINGS 0
+set -U FZF_REVERSE_ISEARCH_OPTS "--reverse --height=100%"

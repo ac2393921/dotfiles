@@ -1,3 +1,4 @@
+set -U FZF_LEGACY_KEYBINDINGS 0
 set -q FZF_TMUX_HEIGHT; or set -U FZF_TMUX_HEIGHT "40%"
 set -q FZF_DEFAULT_OPTS; or set -U FZF_DEFAULT_OPTS "--height $FZF_TMUX_HEIGHT"
 set -q FZF_LEGACY_KEYBINDINGS; or set -U FZF_LEGACY_KEYBINDINGS 1
@@ -60,4 +61,16 @@ function _fzf_uninstall -e fzf_uninstall
         | source
 
     functions --erase _fzf_uninstall
+end
+
+function ghq_fzf_repo -d 'Repository search'
+  ghq list --full-path | fzf --reverse --height=100% | read select
+  [ -n "$select" ]; and cd "$select"
+  echo " $select "
+  commandline -f repaint
+end
+
+# fish key bindings
+function fish_user_key_bindings
+  bind \cg ghq_fzf_repo
 end
