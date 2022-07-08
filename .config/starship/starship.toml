@@ -1,0 +1,62 @@
+add_newline = false
+scan_timeout = 10
+
+format = """
+[╭─](bold #FF3F00)$username$directory$git_branch$git_status$fill$character$shell$battery$time
+[╰─](bold #FF3F00) """
+
+[line_break]
+disabled = false
+
+[fill]
+symbol = "─"
+style = "fg:#FF3F00 bold"
+
+[character]
+success_symbol = "[  --🛸](bold cyan)"
+error_symbol = "[  --💥](bold red)"
+
+[battery]
+full_symbol = ""
+format = "[$symbol$percentage ](fg:#FF3F00)"
+
+[[battery.display]]
+threshold = 100
+
+[time]
+format = '[ $time ](fg:#fff1cf bg:#49B38E)'
+utc_time_offset = "local"
+time_format = "%T"
+disabled = false
+time_range = "-"
+
+[git_branch]
+format = " [$symbol$branch ](fg:#FF3F00 bg:#252525)[ ](fg:#252525 bg:#49B38E bold)"
+symbol = " "
+
+[shell]
+bash_indicator = "[](fg:#c4c431 bg:#49B38E)[ BSH-MODE ](fg:#fff1cf bg:#c4c431)[](fg:#c4c431 bg:#49B38E)"
+zsh_indicator = "[](fg:#94b3a8 bg:#49B38E)[ ZSH-MODE ](fg:#fff1cf bg:#94b3a8)[](fg:#94b3a8 bg:#49B38E)"
+nu_indicator = "[](fg:#fe6142 bg:#49B38E)[ NSH-MODE ](fg:#fff1cf bg:#fe6142)[](fg:#fe6142 bg:#49B38E)"
+fish_indicator = "[](fg:#5442f5 bg:#49B38E)[ FSH-MODE ](fg:#fff1cf bg:#5442f5)[](fg:#5442f5 bg:#49B38E)"
+elvish_indicator = "[](fg:#a742f5 bg:#49B38E)[ ESH-MODE ](fg:#fff1cf bg:#a742f5)[](fg:#a742f5 bg:#49B38E)"
+xonsh_indicator = "[](fg:#70ff24 bg:#49B38E)[ XSH-MODE ](fg:#fff1cf bg:#70ff24)[](fg:#70ff24 bg:#49B38E)"
+unknown_indicator = "[](fg:#fff1cf bg:#49B38E)[ ???-MODE ][](fg:#49B38E)"
+style = "fg:#fff1cf bg:#49B38E"
+disabled = false
+
+[directory]
+format = "[$path]($style)[$read_only](fg:#fff bg:#49B38E)[ ](fg:#49B38E bg:#49B38E bold)"
+style = "fg:#fff1cf bg:#49B38E"
+truncation_symbol = "…/"
+truncate_to_repo = false
+truncation_length = 100
+home_symbol = " "
+
+[git_status]
+format = '([\[$all_status$ahead_behind\] ](fg:#fff1cf bg:#49B38E)[ ](bg:#252525))'
+
+[username]
+format = "[ ](fg:#49B38E bg:#49B38E bold)[☤ ](fg:#FF3F00 bg:#49B38E bold)[│ ](fg:#FF3F00 bg:#49B38E bold)"
+show_always = true
+disabled = false
