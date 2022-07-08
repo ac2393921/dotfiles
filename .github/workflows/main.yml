@@ -13,15 +13,15 @@ jobs:
       - name: Install dotfiles
         run: ./install.sh
 
-  centos:
-    runs-on: ubuntu-latest
-    container: centos:latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Install required packages
-        run: yum install -y git sudo
-      - name: Install dotfiles
-        run: ./install.sh
+  # centos:
+  #   runs-on: ubuntu-latest
+  #   container: centos:latest
+  #   steps:
+  #     - uses: actions/checkout@v1
+  #     - name: Install required packages
+  #       run: yum install -y git sudo
+  #     - name: Install dotfiles
+  #       run: ./install.sh
 
   alpine:
     runs-on: ubuntu-latest
