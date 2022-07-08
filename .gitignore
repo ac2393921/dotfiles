@@ -65,7 +65,11 @@
 !/.vscode
 !/.github
 !/install.sh
-!/Makefile
+!/.shell
+!/.aliases
+!/.aliases/**
+!/.bundle
+!/.bundle/**
 
 !/README.md
 !/LICENSE
