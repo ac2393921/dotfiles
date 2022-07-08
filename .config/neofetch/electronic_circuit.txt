@@ -1,0 +1,20 @@
+${c2} .:cccccccccccccccccccccccccc:.
+ .:cccc.   .ccccccccccccccccc:.
+${c1} NMMMM${c3}Mc   .MM${c1}MMMMMMMMMMMMMMMMW
+ MMMMM${c3}Mc   .MM${c1}MMMMMM${c3}N0kONM${c1}MMMMM
+ MMM${c3}MX:     ,KWWWWX;     ,K${c1}MMMM
+ MM${c3}MM. 'KMX;        'KMX; .NM${c1}MM
+ MM${c3}MW. ;WMWl        :WMWc  NM${c1}MM
+ MMM${c3}MK'  .  .kKKKKO.  .  .OM${c1}MMM
+ MMMMM${c3}MKxdx0WM${c1}MMMMM${c3}MKxdxKM${c1}MMMMM
+ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+ MMMMMMMMMMMMMMMMM${c3}MWOoloOWM${c1}MMMM
+ MMMMMMMMMMM${c3}MNOOOOk. .'. .kM${c1}MMM
+ MMMMMMMMMM${c3}Nc       :WMMl  N${c1}MMM
+ MMMMMMMM${c3}Nc         '0NK, .W${c1}MMM
+ MMMMMM${c3}Wo     .OMMN:     :X${c1}MMMM
+ MMMM${c3}Wd.    .kM${c1}MMMM${c3}MWK0KWM${c1}MMMMM
+ XM${c3}Mx.    .dW${c1}MMMMMMMMMMMMMMMMMN
+${c2} ;;;::    :::::::::::::::::::;;
+ '.;:::::::::::::::::::::::::;'
+                              
