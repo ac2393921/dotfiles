@@ -3,35 +3,66 @@
 set -u
 
 # 実行場所のディレクトリを取得
-THIS_DIR=$(cd $(dirname $0); pwd)
+DOT_DIR="$HOME/dotfiles"
 
-cd $THIS_DIR
+cd $DOT_DIR
 git submodule init
 git submodule update
 
+cat << END
+
+**************************************************
+DOTFILES SETUP START!
+**************************************************
+
+END
+
+
 echo "start setup..."
 for f in .??*; do
-    [ "$f" = ".git" ] && continue
-    [ "$f" = ".gitconfig.local.template" ] && continue
-    [ "$f" = ".require_oh-my-zsh" ] && continue
-    [ "$f" = ".gitmodules" ] && continue
+  [[ "$f" = ".zsh" ]] && continue
+  [[ "$f" = ".git" ]] && continue
+  [[ "$f" = ".gitignore" ]] && continue
+  [[ "$f" = ".gitmodules" ]] && continue
 
-    if [ "$f" = ".config" ]; then
-      for c in .config/??*; do
-        echo $c
-        ln -snfv ~/dotfiles/"$c" ~/"$c"
-      done
-    else
-      ln -snfv ~/dotfiles/"$f" ~/
-    fi
+  if [ "$f" = ".config" ]; then
+    for c in .config/??*; do
+      ln -snf ~/dotfiles/"$c" ~/"$c"
+    done
+  elif [ "$f" = ".shell" ]; then
+    cd .shell
+
+    for s in .??*; do
+      if [ "$s" = ".zshrc" ]; then
+        ln -snf ~/dotfiles/.shell/"$s" ~/"$s"
+      elif [ "$s" = ".bashrc" ]; then
+        ln -snf ~/dotfiles/.shell/"$s" ~/"$s"
+      elif [ "$s" = ".zsh" ]; then
+        ln -snf ~/dotfiles/.shell/"$s" ~/"$s"
+      elif [ "$s" = ".xonhrc" ]; then
+        ln -snf ~/dotfiles/.shell/"$s" ~/.config/xonsh/"$s"
+      fi
+    done
+
+    for s in ??*; do
+      if [ "$s" = "config.nu" ]; then
+        ln -snf ~/dotfiles/.shell/"$s" ~/Library/Application\ Support/nushell/"$s"
+      elif [ "$s" = "config.fish" ]; then
+        ln -snf ~/dotfiles/.shell/"$s" ~/.config/fish/"$s"
+      elif [ "$s" = "rc.elv" ]; then
+        ln -snf ~/dotfiles/.shell/"$s" ~/.config/elvish/"$s"
+      fi
+    done
+  else
+    ln -snf ~/dotfiles/"$f" ~/
+  fi
+  echo "Installed $f"
 done
-
-[ -e ~/.gitconfig.local ] || cp ~/dotfiles/.gitconfig.local.template ~/.gitconfig.local
 
 # emacs set up
 if which cask >/dev/null 2>&1; then
   echo "setup .emacs.d..."
-  cd ${THIS_DIR}/.emacs.d
+  cd ${DOT_DIR}/.emacs.d
   cask upgrade
   cask install
 fi
