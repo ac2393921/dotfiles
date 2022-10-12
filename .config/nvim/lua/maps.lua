@@ -20,7 +20,7 @@ keymap.set('n', 'sv', ':vsplit<Return><C-w>w', {silent = true})
 
 -- Move Window
 keymap.set('n', '<Space>', '<C-w>w')
-keymap.set('', 's<ledft>', '<C-w>h')
+keymap.set('', 's<left>', '<C-w>h')
 keymap.set('', 's<up>', '<C-w>k')
 keymap.set('', 's<down>', '<C-w>j')
 keymap.set('', 's<right>', '<C-w>l')
@@ -35,3 +35,17 @@ keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 
+keymap.set('n', '<D-s>', ':w')
+
+keymap.set('n', '<C-s>', ':wa <bar> :QuickRun <stdin.txt <CR>')
+vim.cmd [[
+  let g:quickrun_config = {}
+  let g:quickrun_config['cpp'] = {
+    \  'cmdopt' : '-std=c++14 -Wall',
+    \  'hook/time/enable' : 1
+    \}
+  let g:quickrun_config['_'] = {
+    \  'split' : 'vertical'
+    \}
+  set splitright
+]]

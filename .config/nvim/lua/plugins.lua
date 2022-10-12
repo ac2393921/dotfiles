@@ -49,4 +49,35 @@ packer.startup(function(use)
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 
   use 'fatih/vim-go'
+  use 'cespare/vim-toml'
+  use 'machakann/vim-highlightedyank'
+  use 'tpope/vim-commentary'
+  use 'vim-test/vim-test'
+  use 'dense-analysis/ale'
+  use 'folke/lsp-colors.nvim'
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
+  use 't9md/vim-quickhl'
+  use { 'neoclide/coc.nvim', branch = 'release' }
+
+  -- Deoplete ++
+  -- use {'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins'}
+  use 'deoplete-plugins/deoplete-tag'
+  use { 'deathlyfrantic/deoplete-spell', branch = 'main' }
+  use 'zchee/deoplete-clang'
+  use 'Shougo/neoinclude.vim'
+  use { 'thinca/vim-quickrun' }
+  use 'Shougo/vimproc.vim'
+  use 'Shougo/deoplete.nvim'
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
 end)

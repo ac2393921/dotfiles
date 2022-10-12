@@ -2,6 +2,7 @@ require('base')
 require('highlights')
 require('maps')
 require('plugins')
+require('templates')
 
 local has = function(x)
   return vim.fn.has(x) == 1
