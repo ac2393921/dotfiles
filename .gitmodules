@@ -1,3 +1,6 @@
 [submodule ".shell"]
 	path = .shell
 	url = https://github.com/ac2393921/multiple-shell-mode-system.git
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = https://github.com/ac2393921/nivm-dotfiles
