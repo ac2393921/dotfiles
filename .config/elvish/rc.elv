@@ -1,0 +1,1 @@
+/Users/ac2393921/dotfiles/.shell/rc.elv

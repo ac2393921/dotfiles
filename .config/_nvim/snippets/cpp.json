@@ -1,0 +1,28 @@
+{
+  "cout Yes": {
+    "prefix": ["yes"],
+    "body": ["cout << \"Yes\" << endl;"],
+    "description": "cout yes."
+  },
+  "cout No": {
+    "prefix": ["no"],
+    "body": ["cout << \"No\" << endl;"],
+    "description": "cout no."
+  },
+  "cin": {
+    "prefix": ["cin"],
+    "body": ["cin >> "]
+  },
+  "fori": {
+    "prefix": ["fori"],
+    "body": ["for (int i = 1; i <= N; i++)"]
+  },
+  "rep": {
+    "prefix": ["rep"],
+    "body": ["rep(i,n)"]
+  },
+  "ll": {
+    "prefix": ["ll"],
+    "body": ["using ll = long long;"]
+  }
+}
