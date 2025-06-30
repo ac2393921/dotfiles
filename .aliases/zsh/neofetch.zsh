@@ -1,0 +1,1 @@
+alias neofetch="neofetch --ascii ~/.config/neofetch/alien.txt"
