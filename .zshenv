@@ -19,6 +19,7 @@ export NU_CONFIG_PATH="$DOT/.shell/config.nu"
 
 ###[ ZSH ]######################################################################
 export ALIASES_ZSH_DIR="$DOT/.aliases/zsh"
+export ALIASES_FISH_DIR="$DOT/.aliases/fish"
 
 ###[ ZSH ]######################################################################
 # export BAT_CONFIG_PATH="$DOT/.config/bat/bat.conf"
