@@ -70,9 +70,12 @@
 !/.aliases/**
 !/.bundle
 !/.bundle/**
+!/claude
 
 !/README.md
 !/LICENSE
 !.gitignore
 !.gitkeep
 !/dist
+
+/.bundle/cache
